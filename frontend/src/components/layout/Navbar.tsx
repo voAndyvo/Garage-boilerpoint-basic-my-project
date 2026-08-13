@@ -1,13 +1,11 @@
 'use client'
 
-import Link from 'next/link'
 import { useRouter } from 'next/navigation'
-import { LogOut, User } from 'lucide-react'
 import { useAuth } from '@/hooks/useAuth'
 
 export function Navbar() {
   const router = useRouter()
-  const { user, signOut } = useAuth()
+  const { signOut } = useAuth()
 
   const handleSignOut = async () => {
     await signOut()
@@ -16,27 +14,15 @@ export function Navbar() {
   }
 
   return (
-    <header className="flex h-14 items-center justify-between border-b border-zinc-200 bg-white px-4 dark:border-zinc-800 dark:bg-zinc-900">
-      <div className="text-sm font-semibold lg:hidden">
-        {process.env.NEXT_PUBLIC_APP_NAME ?? 'App'}
-      </div>
-      <div className="flex-1" />
-      <div className="flex items-center gap-3">
-        {user && <span className="hidden text-sm text-zinc-500 sm:block">{user.email}</span>}
-        <Link
-          href="/profile"
-          className="flex h-8 w-8 items-center justify-center rounded-full bg-zinc-100 text-zinc-600 transition-colors hover:bg-zinc-200 dark:bg-zinc-800 dark:text-zinc-400 dark:hover:bg-zinc-700"
-          aria-label="Profile"
-        >
-          <User className="h-4 w-4" />
-        </Link>
+    <header className="flex h-16 items-center justify-end bg-[#663ec7] px-4">
+      <div className="flex items-center">
         <button
           type="button"
           onClick={handleSignOut}
-          className="flex h-8 w-8 items-center justify-center rounded-full text-zinc-400 transition-colors hover:bg-zinc-100 hover:text-zinc-600 dark:hover:bg-zinc-800 dark:hover:text-zinc-300"
+          className="flex items-center justify-center rounded-3xl font-bold pt-2 pb-2 pl-5 pr-5 border-3 text-sm transition-colors hover:bg-zinc-100 hover:text-zinc-600 bg-white text-black"
           aria-label="Sign out"
         >
-          <LogOut className="h-4 w-4" />
+          Log out
         </button>
       </div>
     </header>
