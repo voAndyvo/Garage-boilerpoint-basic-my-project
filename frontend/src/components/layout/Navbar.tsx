@@ -1,7 +1,6 @@
 'use client'
 
 import { useRouter } from 'next/navigation'
-import { LogOut } from 'lucide-react'
 import { useAuth } from '@/hooks/useAuth'
 
 export function Navbar() {

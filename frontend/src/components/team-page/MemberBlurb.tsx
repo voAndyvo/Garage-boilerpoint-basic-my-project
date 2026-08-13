@@ -7,7 +7,7 @@ interface MemberBlurbProps {
 export function MemberBlurb({ blurb } : MemberBlurbProps) {
     const checkLength = () => {
         if (blurb.length > 200) {
-            var newString: string = blurb.substring(0, 197);
+            let newString: string = blurb.substring(0, 197);
             newString += "...";
 
             return newString
