@@ -17,6 +17,6 @@ export function MemberBlurb({ blurb } : MemberBlurbProps) {
     }
 
     return (
-        <p className="text-medium font-medium text-black">{checkLength()}</p>
+        <p className="text-lg font-medium text-black">{checkLength()}</p>
     );
 }

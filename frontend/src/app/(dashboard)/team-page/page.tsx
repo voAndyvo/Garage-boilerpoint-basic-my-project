@@ -11,7 +11,7 @@ export default async function TeamPage() {
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="text-4xl font-bold text-black text-center">Team Page</h1>
+        <h1 className="text-5xl font-bold text-black text-center">Team Page</h1>
       </div>
 
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
@@ -23,11 +23,11 @@ export default async function TeamPage() {
           ]).map((member) => (
           <div
             key={member.name}
-            className="rounded-lg border border-zinc-200 bg-white p-6 shadow-sm text-wrap wrap-break-word"
+            className="rounded-lg border border-zinc-200 bg-white p-6 shadow-sm text-wrap wrap-break-word justify-items-center"
           >
             <MemberImage src={member.image} />
-            <p className="text-medium font-bold text-black text-center mt-3 mb-3">{member.name}</p>
-            <p className="text-medium font-bold text-[#663ec7] text-center bg-[#d8cbf5] rounded-xl mr-10 ml-10 mb-3">{member.role}</p>
+            <p className="text-2xl font-bold text-black text-center mt-3 mb-3">{member.name}</p>
+            <p className="text-2xl font-bold text-[#663ec7] text-center bg-[#d8cbf5] rounded-xl pr-15 pl-15 mb-3">{member.role}</p>
             <MemberBlurb blurb={member.blurb} />
           </div>
         ))}
