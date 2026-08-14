@@ -1,10 +1,10 @@
 import { redirect } from 'next/navigation'
 import { getServerSession } from '@/actions/auth.actions'
-import { DashboardShell } from '@/components/layout/DashboardShell'
+import { PageShell } from '@/components/layout/PageShell'
 
-export default async function DashboardLayout({ children }: { children: React.ReactNode }) {
+export default async function PageLayout({ children }: { children: React.ReactNode }) {
   const session = await getServerSession()
   if (!session) redirect('/auth/signin')
 
-  return <DashboardShell>{children}</DashboardShell>
+  return <PageShell>{children}</PageShell>
 }

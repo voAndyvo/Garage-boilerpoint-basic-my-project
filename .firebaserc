@@ -1,7 +1,7 @@
 {
-  "projects": {
-    "default": "capstone-task01"
-  },
-  "targets": {},
-  "etags": {}
+	"projects": {
+		"default": "capstone-task01"
+	},
+	"targets": {},
+	"etags": {}
 }
