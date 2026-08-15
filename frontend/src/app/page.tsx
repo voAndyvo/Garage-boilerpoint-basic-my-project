@@ -14,7 +14,7 @@ export default function LandingPage() {
           {process.env.NEXT_PUBLIC_APP_NAME ?? 'App'}
         </h1>
         <p className="max-w-md text-lg text-zinc-600 dark:text-zinc-400">
-          Your app description goes here. Edit{' '}
+          This is a BoilerPoint Project created for task2 by Team 43 which has restyled the login/registration page and added the team page dashboard{' '}
           <code className="rounded bg-zinc-100 px-1 py-0.5 font-mono text-sm dark:bg-zinc-800">
             src/app/page.tsx
           </code>{' '}
